@@ -187,6 +187,35 @@ class ClienteController:
             logger.error(f"Error al eliminar cliente {cliente_id}: {e}")
             return False
     
+    def obtener_ultimo_cliente(self) -> Optional[Cliente]:
+        """
+        Obtiene el último cliente creado.
+        
+        Returns:
+            Cliente: Último cliente o None si no existe
+        """
+        try:
+            conn = self.db.get_connection()
+            cursor = conn.cursor()
+            
+            cursor.execute('''
+                SELECT * FROM cliente WHERE baja = 0
+                ORDER BY id DESC LIMIT 1
+            ''')
+            
+            row = cursor.fetchone()
+            
+            if row:
+                cliente = Cliente()
+                cliente.from_dict(dict(row))
+                return cliente
+            
+            return None
+            
+        except Exception as e:
+            logger.error(f"Error al obtener último cliente: {e}")
+            return None
+    
     def buscar_clientes(self, criterio: str, 
                        valor: str) -> List[Cliente]:
         """

@@ -152,6 +152,30 @@
         "documentation": {}
     },
     {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Callable",
         "importPath": "typing",
         "description": "typing",
@@ -232,6 +256,14 @@
         "documentation": {}
     },
     {
+        "label": "setup_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
         "label": "date",
         "importPath": "datetime",
         "description": "datetime",
@@ -257,6 +289,14 @@
     },
     {
         "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -352,6 +392,23 @@
         "importPath": "config",
         "description": "config",
         "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "csv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "csv",
+        "description": "csv",
+        "detail": "csv",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
         "documentation": {}
     },
     {
@@ -493,6 +550,62 @@
     },
     {
         "label": "QFrame",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFrame",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QGridLayout",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
         "isExtraImport": true,
@@ -748,6 +861,14 @@
         "documentation": {}
     },
     {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
         "label": "QSize",
         "importPath": "PyQt6.QtCore",
         "description": "PyQt6.QtCore",
@@ -797,6 +918,22 @@
         "documentation": {}
     },
     {
+        "label": "QColor",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
         "label": "QFont",
         "importPath": "PyQt6.QtGui",
         "description": "PyQt6.QtGui",
@@ -821,7 +958,23 @@
         "documentation": {}
     },
     {
+        "label": "ClienteController",
+        "importPath": "controllers.cliente_controller",
+        "description": "controllers.cliente_controller",
+        "isExtraImport": true,
+        "detail": "controllers.cliente_controller",
+        "documentation": {}
+    },
+    {
         "label": "get_stylesheet",
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "isExtraImport": true,
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "CURRENT_THEME",
         "importPath": "utils.styles",
         "description": "utils.styles",
         "isExtraImport": true,
@@ -866,6 +1019,54 @@
         "description": "utils.icons",
         "isExtraImport": true,
         "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "icon_button_text",
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "isExtraImport": true,
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "ReportGenerator",
+        "importPath": "utils.export",
+        "description": "utils.export",
+        "isExtraImport": true,
+        "detail": "utils.export",
+        "documentation": {}
+    },
+    {
+        "label": "ReportGenerator",
+        "importPath": "utils.export",
+        "description": "utils.export",
+        "isExtraImport": true,
+        "detail": "utils.export",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioController",
+        "importPath": "controllers.servicio_controller",
+        "description": "controllers.servicio_controller",
+        "isExtraImport": true,
+        "detail": "controllers.servicio_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioController",
+        "importPath": "controllers.servicio_controller",
+        "description": "controllers.servicio_controller",
+        "isExtraImport": true,
+        "detail": "controllers.servicio_controller",
+        "documentation": {}
+    },
+    {
+        "label": "Dashboard",
+        "importPath": "views.dashboard",
+        "description": "views.dashboard",
+        "isExtraImport": true,
+        "detail": "views.dashboard",
         "documentation": {}
     },
     {
@@ -882,14 +1083,6 @@
         "description": "views.servicio_view",
         "isExtraImport": true,
         "detail": "views.servicio_view",
-        "documentation": {}
-    },
-    {
-        "label": "ServicioController",
-        "importPath": "controllers.servicio_controller",
-        "description": "controllers.servicio_controller",
-        "isExtraImport": true,
-        "detail": "controllers.servicio_controller",
         "documentation": {}
     },
     {
@@ -991,6 +1184,24 @@
         "documentation": {}
     },
     {
+        "label": "ReportGenerator",
+        "kind": 6,
+        "importPath": "utils.export",
+        "description": "utils.export",
+        "peekOfCode": "class ReportGenerator:\n    \"\"\"\n    Clase para generar reportes en diferentes formatos.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa el generador de reportes.\"\"\"\n        self.export_dir = Path(\"exports\")\n        self.export_dir.mkdir(exist_ok=True)\n    def export_clientes_csv(self, clientes: List[Dict[str, Any]]) -> str:\n        \"\"\"",
+        "detail": "utils.export",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils.export",
+        "description": "utils.export",
+        "peekOfCode": "logger = setup_logger(__name__)\nclass ReportGenerator:\n    \"\"\"\n    Clase para generar reportes en diferentes formatos.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa el generador de reportes.\"\"\"\n        self.export_dir = Path(\"exports\")\n        self.export_dir.mkdir(exist_ok=True)\n    def export_clientes_csv(self, clientes: List[Dict[str, Any]]) -> str:",
+        "detail": "utils.export",
+        "documentation": {}
+    },
+    {
         "label": "get_icon",
         "kind": 2,
         "importPath": "utils.icons",
@@ -1058,7 +1269,7 @@
         "kind": 5,
         "importPath": "utils.styles",
         "description": "utils.styles",
-        "peekOfCode": "DARK_THEME = {\n    \"primary\": \"#2563EB\",      # Azul principal\n    \"primary_light\": \"#3B82F6\",\n    \"primary_dark\": \"#1E40AF\",\n    \"secondary\": \"#10B981\",    # Verde\n    \"danger\": \"#EF4444\",       # Rojo\n    \"warning\": \"#F59E0B\",      # Ámbar\n    \"background\": \"#1F2937\",   # Gris oscuro\n    \"surface\": \"#111827\",      # Superficie más oscura\n    \"border\": \"#374151\",       # Borde gris",
+        "peekOfCode": "DARK_THEME = {\n    \"primary\": \"#2563EB\",       # Azul principal\n    \"primary_light\": \"#3B82F6\",\n    \"primary_dark\": \"#1E40AF\",\n    \"secondary\": \"#10B981\",     # Verde\n    \"danger\": \"#EF4444\",        # Rojo\n    \"warning\": \"#F59E0B\",       # Ámbar\n    \"success\": \"#10B981\",       # Verde éxito\n    \"background\": \"#0F172A\",    # Negro azulado muy oscuro\n    \"surface\": \"#1E293B\",       # Superficie oscura",
         "detail": "utils.styles",
         "documentation": {}
     },
@@ -1067,7 +1278,7 @@
         "kind": 5,
         "importPath": "utils.styles",
         "description": "utils.styles",
-        "peekOfCode": "LIGHT_THEME = {\n    \"primary\": \"#2563EB\",\n    \"primary_light\": \"#3B82F6\",\n    \"primary_dark\": \"#1E40AF\",\n    \"secondary\": \"#10B981\",\n    \"danger\": \"#EF4444\",\n    \"warning\": \"#F59E0B\",\n    \"background\": \"#F9FAFB\",\n    \"surface\": \"#FFFFFF\",\n    \"border\": \"#E5E7EB\",",
+        "peekOfCode": "LIGHT_THEME = {\n    \"primary\": \"#2563EB\",\n    \"primary_light\": \"#3B82F6\",\n    \"primary_dark\": \"#1E40AF\",\n    \"secondary\": \"#10B981\",\n    \"danger\": \"#EF4444\",\n    \"warning\": \"#F59E0B\",\n    \"success\": \"#10B981\",\n    \"background\": \"#F8FAFC\",\n    \"surface\": \"#FFFFFF\",",
         "detail": "utils.styles",
         "documentation": {}
     },
@@ -1121,8 +1332,26 @@
         "kind": 6,
         "importPath": "views.cliente_view",
         "description": "views.cliente_view",
-        "peekOfCode": "class ClienteView(QWidget):\n    \"\"\"\n    Vista principal para la gestión de clientes.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa la vista de clientes.\"\"\"\n        super().__init__()\n        self.controller = ClienteController()\n        self.setStyleSheet(get_stylesheet())\n        self.init_ui()",
+        "peekOfCode": "class ClienteView(QWidget):\n    \"\"\"\n    Vista principal para la gestión de clientes.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa la vista de clientes.\"\"\"\n        super().__init__()\n        self.controller = ClienteController()\n        self.report_generator = ReportGenerator()\n        self.setStyleSheet(get_stylesheet())",
         "detail": "views.cliente_view",
+        "documentation": {}
+    },
+    {
+        "label": "StatCard",
+        "kind": 6,
+        "importPath": "views.dashboard",
+        "description": "views.dashboard",
+        "peekOfCode": "class StatCard(QFrame):\n    \"\"\"\n    Tarjeta de estadística personalizada.\n    \"\"\"\n    def __init__(self, title: str, value: str, subtitle: str = \"\", icon: str = \"•\"):\n        \"\"\"\n        Inicializa la tarjeta de estadística.\n        Args:\n            title: Título de la estadística\n            value: Valor principal",
+        "detail": "views.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "Dashboard",
+        "kind": 6,
+        "importPath": "views.dashboard",
+        "description": "views.dashboard",
+        "peekOfCode": "class Dashboard(QWidget):\n    \"\"\"\n    Vista del dashboard principal con estadísticas.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa el dashboard.\"\"\"\n        super().__init__()\n        self.cliente_controller = ClienteController()\n        self.servicio_controller = ServicioController()\n        self.init_ui()",
+        "detail": "views.dashboard",
         "documentation": {}
     },
     {
@@ -1157,7 +1386,7 @@
         "kind": 6,
         "importPath": "views.servicio_view",
         "description": "views.servicio_view",
-        "peekOfCode": "class ServicioView(QWidget):\n    \"\"\"\n    Vista principal para la gestión de servicios.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa la vista de servicios.\"\"\"\n        super().__init__()\n        self.controller = ServicioController()\n        self.setStyleSheet(get_stylesheet())\n        self.init_ui()",
+        "peekOfCode": "class ServicioView(QWidget):\n    \"\"\"\n    Vista principal para la gestión de servicios.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa la vista de servicios.\"\"\"\n        super().__init__()\n        self.controller = ServicioController()\n        self.report_generator = ReportGenerator()\n        self.setStyleSheet(get_stylesheet())",
         "detail": "views.servicio_view",
         "documentation": {}
     },

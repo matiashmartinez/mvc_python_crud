@@ -10,6 +10,7 @@ from PyQt6.QtGui import QFont
 from controllers.cliente_controller import ClienteController
 from utils.styles import get_stylesheet
 from utils.icons import icon_button_text
+from utils.export import ReportGenerator
 
 class ClienteDialog(QDialog):
     """
@@ -141,6 +142,7 @@ class ClienteView(QWidget):
         """Inicializa la vista de clientes."""
         super().__init__()
         self.controller = ClienteController()
+        self.report_generator = ReportGenerator()
         self.setStyleSheet(get_stylesheet())
         self.init_ui()
         self.cargar_clientes()
@@ -185,8 +187,8 @@ class ClienteView(QWidget):
         
         header = self.clientes_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
-        header.setSectionResizeMode(0, QHeaderView.ResizeMode.Fixed)
-        self.clientes_table.setColumnWidth(0, 50)
+        self.clientes_table.setColumnWidth(0, 0)
+        self.clientes_table.horizontalHeader().hideSection(0)
         self.clientes_table.setAlternatingRowColors(True)
         self.clientes_table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
         
@@ -212,10 +214,15 @@ class ClienteView(QWidget):
         self.actualizar_btn.setMinimumHeight(40)
         self.actualizar_btn.clicked.connect(self.cargar_clientes)
         
+        self.exportar_btn = QPushButton(icon_button_text("download", "Exportar CSV"))
+        self.exportar_btn.setMinimumHeight(40)
+        self.exportar_btn.clicked.connect(self.exportar_clientes)
+        
         button_layout.addWidget(self.nuevo_btn)
         button_layout.addWidget(self.editar_btn)
         button_layout.addWidget(self.eliminar_btn)
         button_layout.addStretch()
+        button_layout.addWidget(self.exportar_btn)
         button_layout.addWidget(self.actualizar_btn)
         
         layout.addLayout(button_layout)
@@ -278,6 +285,21 @@ class ClienteView(QWidget):
         row = selected_rows[0].row()
         cliente_id = int(self.clientes_table.item(row, 0).text())
         return self.controller.obtener_cliente(cliente_id)
+    
+    def exportar_clientes(self):
+        """Exporta todos los clientes a CSV."""
+        clientes = self.controller.obtener_todos_clientes(incluir_bajas=True)
+        clientes_data = [c.to_dict() for c in clientes]
+        
+        filepath = self.report_generator.export_clientes_csv(clientes_data)
+        if filepath:
+            QMessageBox.information(
+                self, 
+                "Éxito", 
+                f"Archivo exportado a:\n{filepath}"
+            )
+        else:
+            QMessageBox.warning(self, "Error", "No se pudo exportar los clientes.")
     
     def nuevo_cliente(self):
         """Abre el diálogo para crear un nuevo cliente."""

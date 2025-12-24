@@ -15,6 +15,7 @@ from controllers.servicio_controller import ServicioController
 from models.servicio import Servicio
 from utils.styles import get_stylesheet
 from utils.icons import icon_button_text
+from utils.export import ReportGenerator
 
 
 class ServicioDialog(QDialog):
@@ -42,7 +43,7 @@ class ServicioDialog(QDialog):
         """Inicializa la interfaz de usuario."""
         title = "Editar Servicio" if self.servicio else "Nuevo Servicio"
         self.setWindowTitle(title)
-        self.setMinimumWidth(500)
+        self.setMinimumWidth(550)
         
         layout = QVBoxLayout()
         layout.setSpacing(15)
@@ -76,8 +77,17 @@ class ServicioDialog(QDialog):
         self.costo_input.setPrefix("$ ")
         self.costo_input.setDecimals(2)
         
+        cliente_layout = QHBoxLayout()
         self.cliente_combo = QComboBox()
         self.cargar_clientes()
+        
+        buscar_cliente_btn = QPushButton("🔍")
+        buscar_cliente_btn.setMaximumWidth(45)
+        buscar_cliente_btn.setMinimumHeight(32)
+        buscar_cliente_btn.clicked.connect(self.buscar_cliente)
+        
+        cliente_layout.addWidget(self.cliente_combo)
+        cliente_layout.addWidget(buscar_cliente_btn)
         
         self.baja_checkbox = QCheckBox("Marcar como inactivo")
         
@@ -86,7 +96,7 @@ class ServicioDialog(QDialog):
         form_layout.addRow("📅 Fecha Ingreso:", self.fecha_ingreso_input)
         form_layout.addRow("⏱️ Fecha Estimada:", self.fecha_estimada_input)
         form_layout.addRow("💵 Costo:", self.costo_input)
-        form_layout.addRow("👤 Cliente:", self.cliente_combo)
+        form_layout.addRow("👤 Cliente:", cliente_layout)
         form_layout.addRow("", self.baja_checkbox)
         
         layout.addLayout(form_layout)
@@ -118,6 +128,62 @@ class ServicioDialog(QDialog):
         for cliente in clientes:
             self.cliente_combo.addItem(cliente.nombre_completo, cliente.id)
     
+    def buscar_cliente(self):
+        """Abre un diálogo de búsqueda de cliente."""
+        from PyQt6.QtWidgets import QDialog, QVBoxLayout, QHBoxLayout, QLineEdit, QListWidget, QListWidgetItem, QPushButton
+        
+        dialog = QDialog(self)
+        dialog.setWindowTitle("Buscar Cliente")
+        dialog.setMinimumWidth(400)
+        dialog.setMinimumHeight(300)
+        dialog.setStyleSheet(self.styleSheet())
+        
+        layout = QVBoxLayout()
+        
+        search_input = QLineEdit()
+        search_input.setPlaceholderText("Ingrese nombre, apellido o DNI...")
+        layout.addWidget(search_input)
+        
+        client_list = QListWidget()
+        layout.addWidget(client_list)
+        
+        button_layout = QHBoxLayout()
+        select_btn = QPushButton("Seleccionar")
+        cancel_btn = QPushButton("Cancelar")
+        button_layout.addWidget(select_btn)
+        button_layout.addWidget(cancel_btn)
+        layout.addLayout(button_layout)
+        
+        def actualizar_busqueda():
+            cliente_list.clear()
+            criterio = search_input.text().lower()
+            if not criterio:
+                return
+            
+            clientes = self.cliente_controller.obtener_todos_clientes()
+            for cliente in clientes:
+                if (criterio in cliente.nombre.lower() or 
+                    criterio in cliente.apellido.lower() or 
+                    criterio in cliente.dni):
+                    item = QListWidgetItem(f"{cliente.nombre_completo} - {cliente.dni}")
+                    item.setData(Qt.ItemDataRole.UserRole, cliente.id)
+                    client_list.addItem(item)
+        
+        def seleccionar_cliente():
+            if client_list.currentItem():
+                cliente_id = client_list.currentItem().data(Qt.ItemDataRole.UserRole)
+                index = self.cliente_combo.findData(cliente_id)
+                if index >= 0:
+                    self.cliente_combo.setCurrentIndex(index)
+                dialog.accept()
+        
+        search_input.textChanged.connect(actualizar_busqueda)
+        select_btn.clicked.connect(seleccionar_cliente)
+        cancel_btn.clicked.connect(dialog.reject)
+        
+        dialog.setLayout(layout)
+        dialog.exec()
+    
     def load_data(self):
         """Carga los datos del servicio si está en modo edición."""
         if self.servicio:
@@ -138,12 +204,17 @@ class ServicioDialog(QDialog):
             
             self.costo_input.setValue(self.servicio.costo)
             
-            # Seleccionar el cliente correspondiente
             index = self.cliente_combo.findData(self.servicio.idCliente)
             if index >= 0:
                 self.cliente_combo.setCurrentIndex(index)
             
             self.baja_checkbox.setChecked(self.servicio.baja)
+        else:
+            ultimo_cliente = self.cliente_controller.obtener_ultimo_cliente()
+            if ultimo_cliente:
+                index = self.cliente_combo.findData(ultimo_cliente.id)
+                if index >= 0:
+                    self.cliente_combo.setCurrentIndex(index)
     
     def guardar(self):
         """Guarda los datos del servicio."""
@@ -192,6 +263,7 @@ class ServicioView(QWidget):
         """Inicializa la vista de servicios."""
         super().__init__()
         self.controller = ServicioController()
+        self.report_generator = ReportGenerator()
         self.setStyleSheet(get_stylesheet())
         self.init_ui()
         self.cargar_servicios()
@@ -233,8 +305,8 @@ class ServicioView(QWidget):
         
         header = self.servicios_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents) # pyright: ignore[reportOptionalMemberAccess]
-        header.setSectionResizeMode(0, QHeaderView.ResizeMode.Fixed) # pyright: ignore[reportOptionalMemberAccess]
-        self.servicios_table.setColumnWidth(0, 50)
+        self.servicios_table.setColumnWidth(0, 0)
+        self.servicios_table.horizontalHeader().hideSection(0)
         self.servicios_table.setAlternatingRowColors(True)
         self.servicios_table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
         
@@ -260,10 +332,15 @@ class ServicioView(QWidget):
         self.actualizar_btn.setMinimumHeight(40)
         self.actualizar_btn.clicked.connect(self.cargar_servicios)
         
+        self.exportar_btn = QPushButton(icon_button_text("download", "Exportar CSV"))
+        self.exportar_btn.setMinimumHeight(40)
+        self.exportar_btn.clicked.connect(self.exportar_servicios)
+        
         button_layout.addWidget(self.nuevo_btn)
         button_layout.addWidget(self.editar_btn)
         button_layout.addWidget(self.eliminar_btn)
         button_layout.addStretch()
+        button_layout.addWidget(self.exportar_btn)
         button_layout.addWidget(self.actualizar_btn)
         
         layout.addLayout(button_layout)
@@ -330,6 +407,21 @@ class ServicioView(QWidget):
         row = selected_rows[0].row()
         servicio_id = int(self.servicios_table.item(row, 0).text()) # type: ignore
         return self.controller.obtener_servicio(servicio_id)
+    
+    def exportar_servicios(self):
+        """Exporta todos los servicios a CSV."""
+        servicios = self.controller.obtener_todos_servicios(incluir_bajas=True)
+        servicios_data = [s.to_dict() for s in servicios]
+        
+        filepath = self.report_generator.export_servicios_csv(servicios_data)
+        if filepath:
+            QMessageBox.information(
+                self,
+                "Éxito",
+                f"Archivo exportado a:\n{filepath}"
+            )
+        else:
+            QMessageBox.warning(self, "Error", "No se pudo exportar los servicios.")
     
     def nuevo_servicio(self):
         """Abre el diálogo para crear un nuevo servicio."""

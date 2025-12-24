@@ -6,6 +6,7 @@ from PyQt6.QtWidgets import (QMainWindow, QWidget, QVBoxLayout,
                              QMessageBox, QLabel, QFrame)
 from PyQt6.QtCore import Qt, QSize
 from PyQt6.QtGui import QFont
+from views.dashboard import Dashboard
 from views.cliente_view import ClienteView
 from views.servicio_view import ServicioView
 from utils.logger import setup_logger
@@ -65,9 +66,14 @@ class MainWindow(QMainWindow):
         nav_layout.setContentsMargins(20, 0, 20, 0)
         nav_layout.setSpacing(10)
         
+        self.dashboard_btn = QPushButton(icon_button_text("home", "Dashboard"))
+        self.dashboard_btn.setCheckable(True)
+        self.dashboard_btn.setMinimumHeight(40)
+        self.dashboard_btn.setFont(QFont("Arial", 11, QFont.Weight.Bold))
+        self.dashboard_btn.clicked.connect(self.mostrar_dashboard)
+        
         self.clientes_btn = QPushButton(icon_button_text("users", "Clientes"))
         self.clientes_btn.setCheckable(True)
-        self.clientes_btn.setChecked(True)
         self.clientes_btn.setMinimumHeight(40)
         self.clientes_btn.setFont(QFont("Arial", 11, QFont.Weight.Bold))
         self.clientes_btn.clicked.connect(self.mostrar_clientes)
@@ -78,6 +84,7 @@ class MainWindow(QMainWindow):
         self.servicios_btn.setFont(QFont("Arial", 11, QFont.Weight.Bold))
         self.servicios_btn.clicked.connect(self.mostrar_servicios)
         
+        nav_layout.addWidget(self.dashboard_btn)
         nav_layout.addWidget(self.clientes_btn)
         nav_layout.addWidget(self.servicios_btn)
         nav_layout.addStretch()
@@ -88,28 +95,40 @@ class MainWindow(QMainWindow):
         self.stacked_widget = QStackedWidget()
         
         # Crear vistas
+        self.dashboard_view = Dashboard()
         self.cliente_view = ClienteView()
         self.servicio_view = ServicioView()
         
+        self.stacked_widget.addWidget(self.dashboard_view)
         self.stacked_widget.addWidget(self.cliente_view)
         self.stacked_widget.addWidget(self.servicio_view)
         
         main_layout.addWidget(self.stacked_widget)
         
         # Estado inicial
-        self.mostrar_clientes()
+        self.mostrar_dashboard()
     
-    def mostrar_clientes(self):
-        """Muestra la vista de clientes."""
-        self.clientes_btn.setChecked(True)
+    def mostrar_dashboard(self) -> None:
+        """Muestra la vista del dashboard."""
+        self.dashboard_btn.setChecked(True)
+        self.clientes_btn.setChecked(False)
         self.servicios_btn.setChecked(False)
+        self.dashboard_view.cargar_estadisticas()
         self.stacked_widget.setCurrentIndex(0)
     
-    def mostrar_servicios(self):
+    def mostrar_clientes(self) -> None:
+        """Muestra la vista de clientes."""
+        self.dashboard_btn.setChecked(False)
+        self.clientes_btn.setChecked(True)
+        self.servicios_btn.setChecked(False)
+        self.stacked_widget.setCurrentIndex(1)
+    
+    def mostrar_servicios(self) -> None:
         """Muestra la vista de servicios."""
+        self.dashboard_btn.setChecked(False)
         self.clientes_btn.setChecked(False)
         self.servicios_btn.setChecked(True)
-        self.stacked_widget.setCurrentIndex(1)
+        self.stacked_widget.setCurrentIndex(2)
     
     def closeEvent(self, event): # type: ignore
         """

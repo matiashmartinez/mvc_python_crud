@@ -29,7 +29,10 @@ class ServicioController:
         Returns:
             Servicio: Instancia del servicio creado o None si hay error
         """
-        # Validar datos
+        if not servicio_data.get('idCliente'):
+            logger.warning("Servicio sin cliente asociado - operación rechazada")
+            return None
+        
         if not Servicio.validate_data(servicio_data):
             return None
         

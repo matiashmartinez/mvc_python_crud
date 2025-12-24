@@ -3,17 +3,22 @@ Sistema de estilos y temas para la aplicación.
 """
 
 DARK_THEME = {
-    "primary": "#2563EB",      # Azul principal
+    "primary": "#2563EB",       # Azul principal
     "primary_light": "#3B82F6",
     "primary_dark": "#1E40AF",
-    "secondary": "#10B981",    # Verde
-    "danger": "#EF4444",       # Rojo
-    "warning": "#F59E0B",      # Ámbar
-    "background": "#1F2937",   # Gris oscuro
-    "surface": "#111827",      # Superficie más oscura
-    "border": "#374151",       # Borde gris
-    "text_primary": "#F3F4F6", # Texto blanco
-    "text_secondary": "#9CA3AF", # Texto gris
+    "secondary": "#10B981",     # Verde
+    "danger": "#EF4444",        # Rojo
+    "warning": "#F59E0B",       # Ámbar
+    "success": "#10B981",       # Verde éxito
+    "background": "#0F172A",    # Negro azulado muy oscuro
+    "surface": "#1E293B",       # Superficie oscura
+    "surface_light": "#334155", # Superficie más clara
+    "border": "#475569",        # Borde gris oscuro
+    "border_light": "#64748B",  # Borde más claro
+    "text_primary": "#F8FAFC",  # Texto blanco puro
+    "text_secondary": "#CBD5E1",# Texto gris claro
+    "text_tertiary": "#94A3B8", # Texto gris más oscuro
+    "overlay": "rgba(0, 0, 0, 0.7)",  # Overlay
 }
 
 LIGHT_THEME = {
@@ -23,11 +28,16 @@ LIGHT_THEME = {
     "secondary": "#10B981",
     "danger": "#EF4444",
     "warning": "#F59E0B",
-    "background": "#F9FAFB",
+    "success": "#10B981",
+    "background": "#F8FAFC",
     "surface": "#FFFFFF",
-    "border": "#E5E7EB",
-    "text_primary": "#111827",
-    "text_secondary": "#6B7280",
+    "surface_light": "#F1F5F9",
+    "border": "#E2E8F0",
+    "border_light": "#CBD5E1",
+    "text_primary": "#0F172A",
+    "text_secondary": "#475569",
+    "text_tertiary": "#64748B",
+    "overlay": "rgba(0, 0, 0, 0.05)",
 }
 
 CURRENT_THEME = DARK_THEME
@@ -88,7 +98,7 @@ def get_stylesheet() -> str:
     QLineEdit:focus, QTextEdit:focus, QDateEdit:focus, 
     QComboBox:focus, QSpinBox:focus, QDoubleSpinBox:focus {{
         border: 2px solid {theme['primary']};
-        background-color: {theme['surface']};
+        background-color: {theme['surface_light']};
     }}
     
     QPushButton {{
@@ -128,7 +138,7 @@ def get_stylesheet() -> str:
     
     QTableWidget {{
         background-color: {theme['surface']};
-        alternate-background-color: {theme['background']};
+        alternate-background-color: {theme['surface_light']};
         border: 1px solid {theme['border']};
         border-radius: 6px;
         gridline-color: {theme['border']};
@@ -199,6 +209,22 @@ def get_stylesheet() -> str:
     
     QMessageBox QPushButton {{
         min-width: 60px;
+    }}
+    
+    QScrollBar:vertical {{
+        background-color: {theme['surface']};
+        width: 12px;
+        border-radius: 6px;
+    }}
+    
+    QScrollBar::handle:vertical {{
+        background-color: {theme['border_light']};
+        border-radius: 6px;
+        min-height: 20px;
+    }}
+    
+    QScrollBar::handle:vertical:hover {{
+        background-color: {theme['border']};
     }}
     """
 
