@@ -155,7 +155,7 @@ class ServicioDialog(QDialog):
         layout.addLayout(button_layout)
         
         def actualizar_busqueda():
-            cliente_list.clear()
+            client_list.clear()
             criterio = search_input.text().lower()
             if not criterio:
                 return
@@ -170,8 +170,9 @@ class ServicioDialog(QDialog):
                     client_list.addItem(item)
         
         def seleccionar_cliente():
-            if client_list.currentItem():
-                cliente_id = client_list.currentItem().data(Qt.ItemDataRole.UserRole)
+            current_item = client_list.currentItem()
+            if current_item:
+                cliente_id = current_item.data(Qt.ItemDataRole.UserRole)
                 index = self.cliente_combo.findData(cliente_id)
                 if index >= 0:
                     self.cliente_combo.setCurrentIndex(index)
@@ -304,9 +305,10 @@ class ServicioView(QWidget):
         ])
         
         header = self.servicios_table.horizontalHeader()
-        header.setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents) # pyright: ignore[reportOptionalMemberAccess]
+        if header:
+            header.setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
+            header.hideSection(0)
         self.servicios_table.setColumnWidth(0, 0)
-        self.servicios_table.horizontalHeader().hideSection(0)
         self.servicios_table.setAlternatingRowColors(True)
         self.servicios_table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
         

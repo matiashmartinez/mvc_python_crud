@@ -3,6 +3,7 @@ Utilidades para componentes UI reutilizables.
 """
 from PyQt6.QtWidgets import QTableWidget, QTableWidgetItem
 from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QColor
 from typing import List, Callable, Tuple
 
 
@@ -30,6 +31,6 @@ def populate_table(
             
             for col_rule, color_func in color_rules:
                 if col_rule == col_idx:
-                    table_item.setForeground(color_func(item))
+                    table_item.setForeground(QColor(color_func(item)))
             
             table.setItem(row_idx, col_idx, table_item)

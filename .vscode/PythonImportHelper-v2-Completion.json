@@ -893,12 +893,11 @@
         "documentation": {}
     },
     {
-        "label": "re",
-        "kind": 6,
+        "label": "QColor",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
         "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "detail": "PyQt6.QtGui",
         "documentation": {}
     },
     {
@@ -939,6 +938,15 @@
         "description": "PyQt6.QtGui",
         "isExtraImport": true,
         "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
