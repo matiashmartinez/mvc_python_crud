@@ -1,0 +1,1236 @@
+[
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Callable",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Cliente",
+        "importPath": "models.cliente",
+        "description": "models.cliente",
+        "isExtraImport": true,
+        "detail": "models.cliente",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseConnection",
+        "importPath": "utils.database",
+        "description": "utils.database",
+        "isExtraImport": true,
+        "detail": "utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseConnection",
+        "importPath": "utils.database",
+        "description": "utils.database",
+        "isExtraImport": true,
+        "detail": "utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "isExtraImport": true,
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "date",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Servicio",
+        "importPath": "models.servicio",
+        "description": "models.servicio",
+        "isExtraImport": true,
+        "detail": "models.servicio",
+        "documentation": {}
+    },
+    {
+        "label": "Servicio",
+        "importPath": "models.servicio",
+        "description": "models.servicio",
+        "isExtraImport": true,
+        "detail": "models.servicio",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "validar_dni",
+        "importPath": "utils.validators",
+        "description": "utils.validators",
+        "isExtraImport": true,
+        "detail": "utils.validators",
+        "documentation": {}
+    },
+    {
+        "label": "validar_telefono",
+        "importPath": "utils.validators",
+        "description": "utils.validators",
+        "isExtraImport": true,
+        "detail": "utils.validators",
+        "documentation": {}
+    },
+    {
+        "label": "sqlite3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlite3",
+        "description": "sqlite3",
+        "detail": "sqlite3",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "config",
+        "description": "config",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QDialog",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFormLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QCheckBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHeaderView",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFrame",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMainWindow",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QStackedWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFrame",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QVBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHBoxLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QPushButton",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidget",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QTableWidgetItem",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLabel",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QLineEdit",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QMessageBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QDialog",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFormLayout",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QComboBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QCheckBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QDateEdit",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QDoubleSpinBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QSpinBox",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QHeaderView",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QFrame",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "QApplication",
+        "importPath": "PyQt6.QtWidgets",
+        "description": "PyQt6.QtWidgets",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtWidgets",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QSize",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "Qt",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "QDate",
+        "importPath": "PyQt6.QtCore",
+        "description": "PyQt6.QtCore",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtCore",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "QFont",
+        "importPath": "PyQt6.QtGui",
+        "description": "PyQt6.QtGui",
+        "isExtraImport": true,
+        "detail": "PyQt6.QtGui",
+        "documentation": {}
+    },
+    {
+        "label": "ClienteController",
+        "importPath": "controllers.cliente_controller",
+        "description": "controllers.cliente_controller",
+        "isExtraImport": true,
+        "detail": "controllers.cliente_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ClienteController",
+        "importPath": "controllers.cliente_controller",
+        "description": "controllers.cliente_controller",
+        "isExtraImport": true,
+        "detail": "controllers.cliente_controller",
+        "documentation": {}
+    },
+    {
+        "label": "get_stylesheet",
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "isExtraImport": true,
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "get_stylesheet",
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "isExtraImport": true,
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "get_stylesheet",
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "isExtraImport": true,
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "icon_button_text",
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "isExtraImport": true,
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "icon_button_text",
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "isExtraImport": true,
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "icon_button_text",
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "isExtraImport": true,
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "ClienteView",
+        "importPath": "views.cliente_view",
+        "description": "views.cliente_view",
+        "isExtraImport": true,
+        "detail": "views.cliente_view",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioView",
+        "importPath": "views.servicio_view",
+        "description": "views.servicio_view",
+        "isExtraImport": true,
+        "detail": "views.servicio_view",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioController",
+        "importPath": "controllers.servicio_controller",
+        "description": "controllers.servicio_controller",
+        "isExtraImport": true,
+        "detail": "controllers.servicio_controller",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "importPath": "views.main_window",
+        "description": "views.main_window",
+        "isExtraImport": true,
+        "detail": "views.main_window",
+        "documentation": {}
+    },
+    {
+        "label": "ClienteController",
+        "kind": 6,
+        "importPath": "controllers.cliente_controller",
+        "description": "controllers.cliente_controller",
+        "peekOfCode": "class ClienteController:\n    \"\"\"\n    Controlador que maneja la lógica de negocio para los clientes.\n    Actúa como intermediario entre las vistas y los modelos.\n    \"\"\"\n    def __init__(self) -> None:\n        \"\"\"Inicializa el controlador con la conexión a la base de datos.\"\"\"\n        self.db = DatabaseConnection()\n    def crear_cliente(self, cliente_data: Dict[str, Any]) -> Optional[Cliente]:\n        \"\"\"",
+        "detail": "controllers.cliente_controller",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "controllers.cliente_controller",
+        "description": "controllers.cliente_controller",
+        "peekOfCode": "logger = setup_logger(__name__)\nclass ClienteController:\n    \"\"\"\n    Controlador que maneja la lógica de negocio para los clientes.\n    Actúa como intermediario entre las vistas y los modelos.\n    \"\"\"\n    def __init__(self) -> None:\n        \"\"\"Inicializa el controlador con la conexión a la base de datos.\"\"\"\n        self.db = DatabaseConnection()\n    def crear_cliente(self, cliente_data: Dict[str, Any]) -> Optional[Cliente]:",
+        "detail": "controllers.cliente_controller",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioController",
+        "kind": 6,
+        "importPath": "controllers.servicio_controller",
+        "description": "controllers.servicio_controller",
+        "peekOfCode": "class ServicioController:\n    \"\"\"\n    Controlador que maneja la lógica de negocio para los servicios.\n    \"\"\"\n    def __init__(self) -> None:\n        \"\"\"Inicializa el controlador con la conexión a la base de datos.\"\"\"\n        self.db = DatabaseConnection()\n    def crear_servicio(self, servicio_data: Dict[str, Any]) -> Optional[Servicio]:\n        \"\"\"\n        Crea un nuevo servicio en la base de datos.",
+        "detail": "controllers.servicio_controller",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "controllers.servicio_controller",
+        "description": "controllers.servicio_controller",
+        "peekOfCode": "logger = setup_logger(__name__)\nclass ServicioController:\n    \"\"\"\n    Controlador que maneja la lógica de negocio para los servicios.\n    \"\"\"\n    def __init__(self) -> None:\n        \"\"\"Inicializa el controlador con la conexión a la base de datos.\"\"\"\n        self.db = DatabaseConnection()\n    def crear_servicio(self, servicio_data: Dict[str, Any]) -> Optional[Servicio]:\n        \"\"\"",
+        "detail": "controllers.servicio_controller",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "kind": 6,
+        "importPath": "models.base_model",
+        "description": "models.base_model",
+        "peekOfCode": "class BaseModel(ABC):\n    \"\"\"\n    Clase abstracta base para todos los modelos.\n    Define la interfaz común que deben implementar todos los modelos.\n    \"\"\"\n    @abstractmethod\n    def to_dict(self) -> Dict[str, Any]:\n        \"\"\"\n        Convierte el objeto a un diccionario.\n        Returns:",
+        "detail": "models.base_model",
+        "documentation": {}
+    },
+    {
+        "label": "Cliente",
+        "kind": 6,
+        "importPath": "models.cliente",
+        "description": "models.cliente",
+        "peekOfCode": "class Cliente(BaseModel):\n    \"\"\"\n    Modelo que representa a un cliente.\n    Attributes:\n        id (int): Identificador único del cliente\n        nombre (str): Nombre del cliente\n        apellido (str): Apellido del cliente\n        dni (str): Documento Nacional de Identidad\n        telefono (str): Número de teléfono\n        baja (bool): Estado del cliente (activo/inactivo)",
+        "detail": "models.cliente",
+        "documentation": {}
+    },
+    {
+        "label": "Servicio",
+        "kind": 6,
+        "importPath": "models.servicio",
+        "description": "models.servicio",
+        "peekOfCode": "class Servicio(BaseModel):\n    \"\"\"\n    Modelo que representa un servicio.\n    Attributes:\n        id (int): Identificador único del servicio\n        descripcion (str): Descripción del servicio\n        estado (str): Estado del servicio (PENDIENTE, EN_PROCESO, COMPLETADO, CANCELADO)\n        fecha_ingreso (date): Fecha de ingreso del servicio\n        fecha_estimada (date): Fecha estimada de finalización\n        costo (float): Costo del servicio",
+        "detail": "models.servicio",
+        "documentation": {}
+    },
+    {
+        "label": "DatabaseConnection",
+        "kind": 6,
+        "importPath": "utils.database",
+        "description": "utils.database",
+        "peekOfCode": "class DatabaseConnection:\n    \"\"\"\n    Clase singleton para manejar la conexión a la base de datos.\n    Implementa el patrón Singleton para tener una única instancia de conexión.\n    \"\"\"\n    _instance: Optional['DatabaseConnection'] = None\n    _connection: Optional[sqlite3.Connection] = None\n    def __new__(cls) -> 'DatabaseConnection':\n        \"\"\"Implementación del patrón Singleton.\"\"\"\n        if cls._instance is None:",
+        "detail": "utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "utils.database",
+        "description": "utils.database",
+        "peekOfCode": "logger = setup_logger(__name__)\nclass DatabaseConnection:\n    \"\"\"\n    Clase singleton para manejar la conexión a la base de datos.\n    Implementa el patrón Singleton para tener una única instancia de conexión.\n    \"\"\"\n    _instance: Optional['DatabaseConnection'] = None\n    _connection: Optional[sqlite3.Connection] = None\n    def __new__(cls) -> 'DatabaseConnection':\n        \"\"\"Implementación del patrón Singleton.\"\"\"",
+        "detail": "utils.database",
+        "documentation": {}
+    },
+    {
+        "label": "get_icon",
+        "kind": 2,
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "peekOfCode": "def get_icon(icon_name: str) -> str:\n    \"\"\"\n    Obtiene un icono por nombre.\n    Args:\n        icon_name: Nombre del icono\n    Returns:\n        str: Representación Unicode del icono\n    \"\"\"\n    return ICONS.get(icon_name, \"•\")\ndef icon_button_text(icon_name: str, text: str = \"\") -> str:",
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "icon_button_text",
+        "kind": 2,
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "peekOfCode": "def icon_button_text(icon_name: str, text: str = \"\") -> str:\n    \"\"\"\n    Crea texto de botón con icono.\n    Args:\n        icon_name: Nombre del icono\n        text: Texto del botón\n    Returns:\n        str: Texto formateado con icono\n    \"\"\"\n    icon = get_icon(icon_name)",
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "get_colored_icon",
+        "kind": 2,
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "peekOfCode": "def get_colored_icon(icon_name: str, color: str) -> str:\n    \"\"\"\n    Obtiene un icono (nota: el color debe aplicarse a través de estilos).\n    Args:\n        icon_name: Nombre del icono\n        color: Color a aplicar (para referencia, se aplica vía QSS)\n    Returns:\n        str: Icono\n    \"\"\"\n    return get_icon(icon_name)",
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "ICONS",
+        "kind": 5,
+        "importPath": "utils.icons",
+        "description": "utils.icons",
+        "peekOfCode": "ICONS = {\n    \"add\": \"➕\",\n    \"edit\": \"✏️\",\n    \"delete\": \"🗑️\",\n    \"save\": \"💾\",\n    \"cancel\": \"✖️\",\n    \"search\": \"🔍\",\n    \"refresh\": \"🔄\",\n    \"user\": \"👤\",\n    \"users\": \"👥\",",
+        "detail": "utils.icons",
+        "documentation": {}
+    },
+    {
+        "label": "setup_logger",
+        "kind": 2,
+        "importPath": "utils.logger",
+        "description": "utils.logger",
+        "peekOfCode": "def setup_logger(name: str, level: int = logging.INFO) -> logging.Logger:\n    \"\"\"\n    Configure and return a logger instance.\n    Args:\n        name: Logger name\n        level: Logging level (default: INFO)\n    Returns:\n        Configured logger instance\n    \"\"\"\n    logger = logging.getLogger(name)",
+        "detail": "utils.logger",
+        "documentation": {}
+    },
+    {
+        "label": "get_stylesheet",
+        "kind": 2,
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "peekOfCode": "def get_stylesheet() -> str:\n    \"\"\"\n    Genera el stylesheet completo para la aplicación.\n    Returns:\n        str: Stylesheet QSS\n    \"\"\"\n    theme = CURRENT_THEME\n    return f\"\"\"\n    QMainWindow {{\n        background-color: {theme['background']};",
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "get_button_style",
+        "kind": 2,
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "peekOfCode": "def get_button_style(button_type: str = \"primary\") -> str:\n    \"\"\"\n    Obtiene estilos para un tipo específico de botón.\n    Args:\n        button_type: Tipo de botón ('primary', 'secondary', 'danger', 'success')\n    Returns:\n        str: Clase de estilo QSS\n    \"\"\"\n    styles = {\n        \"primary\": \"QPushButton { background-color: \" + CURRENT_THEME[\"primary\"] + \"; }\",",
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "DARK_THEME",
+        "kind": 5,
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "peekOfCode": "DARK_THEME = {\n    \"primary\": \"#2563EB\",      # Azul principal\n    \"primary_light\": \"#3B82F6\",\n    \"primary_dark\": \"#1E40AF\",\n    \"secondary\": \"#10B981\",    # Verde\n    \"danger\": \"#EF4444\",       # Rojo\n    \"warning\": \"#F59E0B\",      # Ámbar\n    \"background\": \"#1F2937\",   # Gris oscuro\n    \"surface\": \"#111827\",      # Superficie más oscura\n    \"border\": \"#374151\",       # Borde gris",
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "LIGHT_THEME",
+        "kind": 5,
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "peekOfCode": "LIGHT_THEME = {\n    \"primary\": \"#2563EB\",\n    \"primary_light\": \"#3B82F6\",\n    \"primary_dark\": \"#1E40AF\",\n    \"secondary\": \"#10B981\",\n    \"danger\": \"#EF4444\",\n    \"warning\": \"#F59E0B\",\n    \"background\": \"#F9FAFB\",\n    \"surface\": \"#FFFFFF\",\n    \"border\": \"#E5E7EB\",",
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "CURRENT_THEME",
+        "kind": 5,
+        "importPath": "utils.styles",
+        "description": "utils.styles",
+        "peekOfCode": "CURRENT_THEME = DARK_THEME\ndef get_stylesheet() -> str:\n    \"\"\"\n    Genera el stylesheet completo para la aplicación.\n    Returns:\n        str: Stylesheet QSS\n    \"\"\"\n    theme = CURRENT_THEME\n    return f\"\"\"\n    QMainWindow {{",
+        "detail": "utils.styles",
+        "documentation": {}
+    },
+    {
+        "label": "populate_table",
+        "kind": 2,
+        "importPath": "utils.ui_helpers",
+        "description": "utils.ui_helpers",
+        "peekOfCode": "def populate_table(\n    table: QTableWidget,\n    items: List,\n    column_getters: List[Callable],\n    color_rules: List[Tuple[int, Callable[[object], str]]] = []\n) -> None:\n    \"\"\"\n    Populate a table with items using provided column getters.\n    Args:\n        table: QTableWidget to populate",
+        "detail": "utils.ui_helpers",
+        "documentation": {}
+    },
+    {
+        "label": "validar_dni",
+        "kind": 2,
+        "importPath": "utils.validators",
+        "description": "utils.validators",
+        "peekOfCode": "def validar_dni(dni: str) -> bool:\n    \"\"\"\n    Valida que el DNI tenga un formato correcto.\n    Args:\n        dni: Número de DNI a validar\n    Returns:\n        bool: True si el DNI es válido\n    \"\"\"\n    # Eliminar puntos y espacios\n    dni_limpio = dni.replace('.', '').replace(' ', '')",
+        "detail": "utils.validators",
+        "documentation": {}
+    },
+    {
+        "label": "validar_telefono",
+        "kind": 2,
+        "importPath": "utils.validators",
+        "description": "utils.validators",
+        "peekOfCode": "def validar_telefono(telefono: str) -> bool:\n    \"\"\"\n    Valida que el teléfono tenga un formato correcto.\n    Args:\n        telefono: Número de teléfono a validar\n    Returns:\n        bool: True si el teléfono es válido\n    \"\"\"\n    # Eliminar espacios, guiones y paréntesis\n    telefono_limpio = re.sub(r'[\\s\\-\\(\\)]', '', telefono)",
+        "detail": "utils.validators",
+        "documentation": {}
+    },
+    {
+        "label": "ClienteDialog",
+        "kind": 6,
+        "importPath": "views.cliente_view",
+        "description": "views.cliente_view",
+        "peekOfCode": "class ClienteDialog(QDialog):\n    \"\"\"\n    Diálogo para crear o editar un cliente.\n    \"\"\"\n    def __init__(self, cliente=None, parent=None):\n        \"\"\"\n        Inicializa el diálogo.\n        Args:\n            cliente: Instancia de Cliente a editar (None para crear nuevo)\n            parent: Widget padre",
+        "detail": "views.cliente_view",
+        "documentation": {}
+    },
+    {
+        "label": "ClienteView",
+        "kind": 6,
+        "importPath": "views.cliente_view",
+        "description": "views.cliente_view",
+        "peekOfCode": "class ClienteView(QWidget):\n    \"\"\"\n    Vista principal para la gestión de clientes.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa la vista de clientes.\"\"\"\n        super().__init__()\n        self.controller = ClienteController()\n        self.setStyleSheet(get_stylesheet())\n        self.init_ui()",
+        "detail": "views.cliente_view",
+        "documentation": {}
+    },
+    {
+        "label": "MainWindow",
+        "kind": 6,
+        "importPath": "views.main_window",
+        "description": "views.main_window",
+        "peekOfCode": "class MainWindow(QMainWindow):\n    \"\"\"\n    Ventana principal que contiene las diferentes vistas de la aplicación.\n    \"\"\"\n    def __init__(self) -> None:\n        \"\"\"Inicializa la ventana principal.\"\"\"\n        super().__init__()\n        self.init_ui()\n    def init_ui(self) -> None:\n        \"\"\"Inicializa la interfaz de usuario.\"\"\"",
+        "detail": "views.main_window",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "views.main_window",
+        "description": "views.main_window",
+        "peekOfCode": "logger = setup_logger(__name__)\nclass MainWindow(QMainWindow):\n    \"\"\"\n    Ventana principal que contiene las diferentes vistas de la aplicación.\n    \"\"\"\n    def __init__(self) -> None:\n        \"\"\"Inicializa la ventana principal.\"\"\"\n        super().__init__()\n        self.init_ui()\n    def init_ui(self) -> None:",
+        "detail": "views.main_window",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioDialog",
+        "kind": 6,
+        "importPath": "views.servicio_view",
+        "description": "views.servicio_view",
+        "peekOfCode": "class ServicioDialog(QDialog):\n    \"\"\"\n    Diálogo para crear o editar un servicio.\n    \"\"\"\n    def __init__(self, servicio=None, parent=None):\n        \"\"\"\n        Inicializa el diálogo.\n        Args:\n            servicio: Instancia de Servicio a editar (None para crear nuevo)\n            parent: Widget padre",
+        "detail": "views.servicio_view",
+        "documentation": {}
+    },
+    {
+        "label": "ServicioView",
+        "kind": 6,
+        "importPath": "views.servicio_view",
+        "description": "views.servicio_view",
+        "peekOfCode": "class ServicioView(QWidget):\n    \"\"\"\n    Vista principal para la gestión de servicios.\n    \"\"\"\n    def __init__(self):\n        \"\"\"Inicializa la vista de servicios.\"\"\"\n        super().__init__()\n        self.controller = ServicioController()\n        self.setStyleSheet(get_stylesheet())\n        self.init_ui()",
+        "detail": "views.servicio_view",
+        "documentation": {}
+    },
+    {
+        "label": "DB_PATH",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DB_PATH = os.getenv('DB_PATH', 'data/database.db')\nDB_DIR = os.path.dirname(DB_PATH)\nLOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')\nAPP_NAME = \"Sistema de Gestión - Clientes y Servicios\"\nAPP_WIDTH = 1200\nAPP_HEIGHT = 700",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "DB_DIR",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "DB_DIR = os.path.dirname(DB_PATH)\nLOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')\nAPP_NAME = \"Sistema de Gestión - Clientes y Servicios\"\nAPP_WIDTH = 1200\nAPP_HEIGHT = 700",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "LOG_LEVEL",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')\nAPP_NAME = \"Sistema de Gestión - Clientes y Servicios\"\nAPP_WIDTH = 1200\nAPP_HEIGHT = 700",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "APP_NAME",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "APP_NAME = \"Sistema de Gestión - Clientes y Servicios\"\nAPP_WIDTH = 1200\nAPP_HEIGHT = 700",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "APP_WIDTH",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "APP_WIDTH = 1200\nAPP_HEIGHT = 700",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "APP_HEIGHT",
+        "kind": 5,
+        "importPath": "config",
+        "description": "config",
+        "peekOfCode": "APP_HEIGHT = 700",
+        "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main() -> None:\n    \"\"\"\n    Función principal que inicia la aplicación.\n    \"\"\"\n    try:\n        logger.info(\"Iniciando aplicación...\")\n        app = QApplication(sys.argv)\n        main_window = MainWindow()\n        main_window.show()\n        logger.info(\"Aplicación iniciada correctamente\")",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "logger = setup_logger(__name__)\ndef main() -> None:\n    \"\"\"\n    Función principal que inicia la aplicación.\n    \"\"\"\n    try:\n        logger.info(\"Iniciando aplicación...\")\n        app = QApplication(sys.argv)\n        main_window = MainWindow()\n        main_window.show()",
+        "detail": "main",
+        "documentation": {}
+    }
+]

@@ -4,9 +4,12 @@ Vista para la gestión de clientes.
 from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
                              QTableWidget, QTableWidgetItem, QLabel, QLineEdit,
                              QMessageBox, QDialog, QFormLayout, QComboBox,
-                             QCheckBox, QHeaderView)
+                             QCheckBox, QHeaderView, QFrame)
 from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QFont
 from controllers.cliente_controller import ClienteController
+from utils.styles import get_stylesheet
+from utils.icons import icon_button_text
 
 class ClienteDialog(QDialog):
     """
@@ -24,40 +27,59 @@ class ClienteDialog(QDialog):
         super().__init__(parent)
         self.cliente = cliente
         self.controller = ClienteController()
+        self.setStyleSheet(get_stylesheet())
         self.init_ui()
         self.load_data()
     
     def init_ui(self):
         """Inicializa la interfaz de usuario."""
-        self.setWindowTitle("Cliente" if self.cliente else "Nuevo Cliente")
-        self.setMinimumWidth(400)
+        title = "Editar Cliente" if self.cliente else "Nuevo Cliente"
+        self.setWindowTitle(title)
+        self.setMinimumWidth(450)
         
         layout = QVBoxLayout()
+        layout.setSpacing(15)
+        layout.setContentsMargins(20, 20, 20, 20)
         
-        # Formulario
+        title_label = QLabel(icon_button_text("user", title))
+        title_font = QFont()
+        title_font.setPointSize(14)
+        title_font.setBold(True)
+        title_label.setFont(title_font)
+        layout.addWidget(title_label)
+        
         form_layout = QFormLayout()
+        form_layout.setSpacing(12)
         
         self.nombre_input = QLineEdit()
+        self.nombre_input.setPlaceholderText("Ingrese el nombre...")
         self.apellido_input = QLineEdit()
+        self.apellido_input.setPlaceholderText("Ingrese el apellido...")
         self.dni_input = QLineEdit()
+        self.dni_input.setPlaceholderText("Ej: 12345678")
         self.telefono_input = QLineEdit()
-        self.baja_checkbox = QCheckBox("Dado de baja")
+        self.telefono_input.setPlaceholderText("Ej: 1123456789")
+        self.baja_checkbox = QCheckBox("Marcar como inactivo")
         
-        form_layout.addRow("Nombre:", self.nombre_input)
-        form_layout.addRow("Apellido:", self.apellido_input)
-        form_layout.addRow("DNI:", self.dni_input)
-        form_layout.addRow("Teléfono:", self.telefono_input)
+        form_layout.addRow("👤 Nombre:", self.nombre_input)
+        form_layout.addRow("👥 Apellido:", self.apellido_input)
+        form_layout.addRow("🆔 DNI:", self.dni_input)
+        form_layout.addRow("📞 Teléfono:", self.telefono_input)
         form_layout.addRow("", self.baja_checkbox)
         
         layout.addLayout(form_layout)
+        layout.addSpacing(10)
         
-        # Botones
         button_layout = QHBoxLayout()
+        button_layout.setSpacing(10)
         
-        self.guardar_btn = QPushButton("Guardar")
+        self.guardar_btn = QPushButton(icon_button_text("save", "Guardar"))
+        self.guardar_btn.setMinimumHeight(40)
         self.guardar_btn.clicked.connect(self.guardar)
         
-        self.cancelar_btn = QPushButton("Cancelar")
+        self.cancelar_btn = QPushButton(icon_button_text("cancel", "Cancelar"))
+        self.cancelar_btn.setMinimumHeight(40)
+        self.cancelar_btn.setObjectName("dangerBtn")
         self.cancelar_btn.clicked.connect(self.reject)
         
         button_layout.addWidget(self.guardar_btn)
@@ -119,64 +141,75 @@ class ClienteView(QWidget):
         """Inicializa la vista de clientes."""
         super().__init__()
         self.controller = ClienteController()
+        self.setStyleSheet(get_stylesheet())
         self.init_ui()
         self.cargar_clientes()
     
     def init_ui(self):
         """Inicializa la interfaz de usuario."""
         layout = QVBoxLayout()
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(15)
         
-        # Título
-        title_label = QLabel("Gestión de Clientes")
-        title_label.setStyleSheet("font-size: 18px; font-weight: bold;")
-        title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        title_label = QLabel("📋 Gestión de Clientes")
+        title_font = QFont()
+        title_font.setPointSize(16)
+        title_font.setBold(True)
+        title_label.setFont(title_font)
         layout.addWidget(title_label)
         
-        # Controles de búsqueda
         search_layout = QHBoxLayout()
+        search_layout.setSpacing(10)
         
+        search_label = QLabel(icon_button_text("filter", "Filtrar por:"))
         self.search_combo = QComboBox()
         self.search_combo.addItems(["Nombre", "Apellido", "DNI"])
+        self.search_combo.setMaximumWidth(150)
         
         self.search_input = QLineEdit()
-        self.search_input.setPlaceholderText("Buscar...")
+        self.search_input.setPlaceholderText("Ingrese el valor a buscar...")
         self.search_input.textChanged.connect(self.buscar_clientes)
         
-        search_layout.addWidget(QLabel("Buscar por:"))
+        search_layout.addWidget(search_label)
         search_layout.addWidget(self.search_combo)
         search_layout.addWidget(self.search_input)
         search_layout.addStretch()
         
         layout.addLayout(search_layout)
         
-        # Tabla de clientes
         self.clientes_table = QTableWidget()
         self.clientes_table.setColumnCount(6)
         self.clientes_table.setHorizontalHeaderLabels([
             "ID", "Nombre", "Apellido", "DNI", "Teléfono", "Estado"
         ])
         
-        # Ajustar tamaño de columnas
         header = self.clientes_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents)
         header.setSectionResizeMode(0, QHeaderView.ResizeMode.Fixed)
         self.clientes_table.setColumnWidth(0, 50)
+        self.clientes_table.setAlternatingRowColors(True)
+        self.clientes_table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
         
         layout.addWidget(self.clientes_table)
         
-        # Botones de acción
         button_layout = QHBoxLayout()
+        button_layout.setSpacing(10)
         
-        self.nuevo_btn = QPushButton("Nuevo Cliente")
+        self.nuevo_btn = QPushButton(icon_button_text("add", "Nuevo Cliente"))
+        self.nuevo_btn.setMinimumHeight(40)
         self.nuevo_btn.clicked.connect(self.nuevo_cliente)
         
-        self.editar_btn = QPushButton("Editar")
+        self.editar_btn = QPushButton(icon_button_text("edit", "Editar"))
+        self.editar_btn.setMinimumHeight(40)
         self.editar_btn.clicked.connect(self.editar_cliente)
         
-        self.eliminar_btn = QPushButton("Eliminar")
+        self.eliminar_btn = QPushButton(icon_button_text("delete", "Eliminar"))
+        self.eliminar_btn.setMinimumHeight(40)
+        self.eliminar_btn.setObjectName("dangerBtn")
         self.eliminar_btn.clicked.connect(self.eliminar_cliente)
         
-        self.actualizar_btn = QPushButton("Actualizar")
+        self.actualizar_btn = QPushButton(icon_button_text("refresh", "Actualizar"))
+        self.actualizar_btn.setMinimumHeight(40)
         self.actualizar_btn.clicked.connect(self.cargar_clientes)
         
         button_layout.addWidget(self.nuevo_btn)

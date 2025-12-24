@@ -5,13 +5,16 @@ from PyQt6.QtWidgets import (QWidget, QVBoxLayout, QHBoxLayout, QPushButton,
                              QTableWidget, QTableWidgetItem, QLabel, QLineEdit,
                              QMessageBox, QDialog, QFormLayout, QComboBox,
                              QCheckBox, QDateEdit, QDoubleSpinBox, QSpinBox,
-                             QHeaderView)
+                             QHeaderView, QFrame)
 from PyQt6.QtCore import Qt, QDate
+from PyQt6.QtGui import QFont
 from datetime import date
 
 from controllers.cliente_controller import ClienteController
 from controllers.servicio_controller import ServicioController
 from models.servicio import Servicio
+from utils.styles import get_stylesheet
+from utils.icons import icon_button_text
 
 
 class ServicioDialog(QDialog):
@@ -31,20 +34,32 @@ class ServicioDialog(QDialog):
         self.servicio = servicio
         self.servicio_controller = ServicioController()
         self.cliente_controller = ClienteController()
+        self.setStyleSheet(get_stylesheet())
         self.init_ui()
         self.load_data()
     
     def init_ui(self):
         """Inicializa la interfaz de usuario."""
-        self.setWindowTitle("Servicio" if self.servicio else "Nuevo Servicio")
-        self.setMinimumWidth(400)
+        title = "Editar Servicio" if self.servicio else "Nuevo Servicio"
+        self.setWindowTitle(title)
+        self.setMinimumWidth(500)
         
         layout = QVBoxLayout()
+        layout.setSpacing(15)
+        layout.setContentsMargins(20, 20, 20, 20)
         
-        # Formulario
+        title_label = QLabel(icon_button_text("service", title))
+        title_font = QFont()
+        title_font.setPointSize(14)
+        title_font.setBold(True)
+        title_label.setFont(title_font)
+        layout.addWidget(title_label)
+        
         form_layout = QFormLayout()
+        form_layout.setSpacing(12)
         
         self.descripcion_input = QLineEdit()
+        self.descripcion_input.setPlaceholderText("Descripción del servicio...")
         self.estado_combo = QComboBox()
         self.estado_combo.addItems(Servicio.ESTADOS)
         
@@ -64,25 +79,29 @@ class ServicioDialog(QDialog):
         self.cliente_combo = QComboBox()
         self.cargar_clientes()
         
-        self.baja_checkbox = QCheckBox("Dado de baja")
+        self.baja_checkbox = QCheckBox("Marcar como inactivo")
         
-        form_layout.addRow("Descripción:", self.descripcion_input)
-        form_layout.addRow("Estado:", self.estado_combo)
-        form_layout.addRow("Fecha Ingreso:", self.fecha_ingreso_input)
-        form_layout.addRow("Fecha Estimada:", self.fecha_estimada_input)
-        form_layout.addRow("Costo:", self.costo_input)
-        form_layout.addRow("Cliente:", self.cliente_combo)
+        form_layout.addRow("📝 Descripción:", self.descripcion_input)
+        form_layout.addRow("🔄 Estado:", self.estado_combo)
+        form_layout.addRow("📅 Fecha Ingreso:", self.fecha_ingreso_input)
+        form_layout.addRow("⏱️ Fecha Estimada:", self.fecha_estimada_input)
+        form_layout.addRow("💵 Costo:", self.costo_input)
+        form_layout.addRow("👤 Cliente:", self.cliente_combo)
         form_layout.addRow("", self.baja_checkbox)
         
         layout.addLayout(form_layout)
+        layout.addSpacing(10)
         
-        # Botones
         button_layout = QHBoxLayout()
+        button_layout.setSpacing(10)
         
-        self.guardar_btn = QPushButton("Guardar")
+        self.guardar_btn = QPushButton(icon_button_text("save", "Guardar"))
+        self.guardar_btn.setMinimumHeight(40)
         self.guardar_btn.clicked.connect(self.guardar)
         
-        self.cancelar_btn = QPushButton("Cancelar")
+        self.cancelar_btn = QPushButton(icon_button_text("cancel", "Cancelar"))
+        self.cancelar_btn.setMinimumHeight(40)
+        self.cancelar_btn.setObjectName("dangerBtn")
         self.cancelar_btn.clicked.connect(self.reject)
         
         button_layout.addWidget(self.guardar_btn)
@@ -173,33 +192,38 @@ class ServicioView(QWidget):
         """Inicializa la vista de servicios."""
         super().__init__()
         self.controller = ServicioController()
+        self.setStyleSheet(get_stylesheet())
         self.init_ui()
         self.cargar_servicios()
     
     def init_ui(self):
         """Inicializa la interfaz de usuario."""
         layout = QVBoxLayout()
+        layout.setContentsMargins(20, 20, 20, 20)
+        layout.setSpacing(15)
         
-        # Título
-        title_label = QLabel("Gestión de Servicios")
-        title_label.setStyleSheet("font-size: 18px; font-weight: bold;")
-        title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        title_label = QLabel("🔧 Gestión de Servicios")
+        title_font = QFont()
+        title_font.setPointSize(16)
+        title_font.setBold(True)
+        title_label.setFont(title_font)
         layout.addWidget(title_label)
         
-        # Controles de filtro
         filter_layout = QHBoxLayout()
+        filter_layout.setSpacing(10)
         
+        filter_label = QLabel(icon_button_text("filter", "Filtrar por estado:"))
         self.filter_combo = QComboBox()
         self.filter_combo.addItems(["Todos", "PENDIENTE", "EN_PROCESO", "COMPLETADO", "CANCELADO"])
+        self.filter_combo.setMaximumWidth(200)
         self.filter_combo.currentTextChanged.connect(self.filtrar_servicios)
         
-        filter_layout.addWidget(QLabel("Filtrar por estado:"))
+        filter_layout.addWidget(filter_label)
         filter_layout.addWidget(self.filter_combo)
         filter_layout.addStretch()
         
         layout.addLayout(filter_layout)
         
-        # Tabla de servicios
         self.servicios_table = QTableWidget()
         self.servicios_table.setColumnCount(8)
         self.servicios_table.setHorizontalHeaderLabels([
@@ -207,27 +231,33 @@ class ServicioView(QWidget):
             "Costo", "ID Cliente", "Estado"
         ])
         
-        # Ajustar tamaño de columnas
         header = self.servicios_table.horizontalHeader()
         header.setSectionResizeMode(QHeaderView.ResizeMode.ResizeToContents) # pyright: ignore[reportOptionalMemberAccess]
         header.setSectionResizeMode(0, QHeaderView.ResizeMode.Fixed) # pyright: ignore[reportOptionalMemberAccess]
         self.servicios_table.setColumnWidth(0, 50)
+        self.servicios_table.setAlternatingRowColors(True)
+        self.servicios_table.setSelectionBehavior(QTableWidget.SelectionBehavior.SelectRows)
         
         layout.addWidget(self.servicios_table)
         
-        # Botones de acción
         button_layout = QHBoxLayout()
+        button_layout.setSpacing(10)
         
-        self.nuevo_btn = QPushButton("Nuevo Servicio")
+        self.nuevo_btn = QPushButton(icon_button_text("add", "Nuevo Servicio"))
+        self.nuevo_btn.setMinimumHeight(40)
         self.nuevo_btn.clicked.connect(self.nuevo_servicio)
         
-        self.editar_btn = QPushButton("Editar")
+        self.editar_btn = QPushButton(icon_button_text("edit", "Editar"))
+        self.editar_btn.setMinimumHeight(40)
         self.editar_btn.clicked.connect(self.editar_servicio)
         
-        self.eliminar_btn = QPushButton("Eliminar")
+        self.eliminar_btn = QPushButton(icon_button_text("delete", "Eliminar"))
+        self.eliminar_btn.setMinimumHeight(40)
+        self.eliminar_btn.setObjectName("dangerBtn")
         self.eliminar_btn.clicked.connect(self.eliminar_servicio)
         
-        self.actualizar_btn = QPushButton("Actualizar")
+        self.actualizar_btn = QPushButton(icon_button_text("refresh", "Actualizar"))
+        self.actualizar_btn.setMinimumHeight(40)
         self.actualizar_btn.clicked.connect(self.cargar_servicios)
         
         button_layout.addWidget(self.nuevo_btn)

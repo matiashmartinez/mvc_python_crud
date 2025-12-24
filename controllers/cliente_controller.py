@@ -4,6 +4,10 @@ Controlador para manejar las operaciones CRUD de clientes.
 from typing import List, Optional, Dict, Any
 from models.cliente import Cliente
 from utils.database import DatabaseConnection
+from utils.logger import setup_logger
+
+logger = setup_logger(__name__)
+
 
 class ClienteController:
     """
@@ -11,7 +15,7 @@ class ClienteController:
     Actúa como intermediario entre las vistas y los modelos.
     """
     
-    def __init__(self):
+    def __init__(self) -> None:
         """Inicializa el controlador con la conexión a la base de datos."""
         self.db = DatabaseConnection()
     
@@ -25,32 +29,30 @@ class ClienteController:
         Returns:
             Cliente: Instancia del cliente creado o None si hay error
         """
-        # Validar datos
         if not Cliente.validate_data(cliente_data):
+            logger.warning(f"Datos de cliente inválidos: {cliente_data}")
             return None
         
-        # Crear instancia del cliente
         cliente = Cliente().from_dict(cliente_data)
         
         try:
             conn = self.db.get_connection()
             cursor = conn.cursor()
             
-            # Insertar en la base de datos
             cursor.execute('''
                 INSERT INTO cliente (nombre, apellido, dni, telefono, baja)
                 VALUES (?, ?, ?, ?, ?)
             ''', (cliente.nombre, cliente.apellido, cliente.dni, 
                   cliente.telefono, cliente.baja))
             
-            # Obtener el ID generado
             cliente.id = cursor.lastrowid
             conn.commit()
             
+            logger.info(f"Cliente creado: ID={cliente.id}, DNI={cliente.dni}")
             return cliente
             
         except Exception as e:
-            print(f"Error al crear cliente: {e}")
+            logger.error(f"Error al crear cliente: {e}")
             return None
     
     def obtener_cliente(self, cliente_id: int) -> Optional[Cliente]:
@@ -81,7 +83,7 @@ class ClienteController:
             return None
             
         except Exception as e:
-            print(f"Error al obtener cliente: {e}")
+            logger.error(f"Error al obtener cliente: {e}")
             return None
     
     def obtener_todos_clientes(self, incluir_bajas: bool = False) -> List[Cliente]:
@@ -112,7 +114,7 @@ class ClienteController:
             return clientes
             
         except Exception as e:
-            print(f"Error al obtener clientes: {e}")
+            logger.error(f"Error al obtener clientes: {e}")
             return []
     
     def actualizar_cliente(self, cliente_id: int, 
@@ -127,8 +129,8 @@ class ClienteController:
         Returns:
             bool: True si se actualizó correctamente
         """
-        # Validar datos
         if not Cliente.validate_data(cliente_data):
+            logger.warning(f"Datos inválidos para actualizar cliente {cliente_id}")
             return False
         
         try:
@@ -144,10 +146,13 @@ class ClienteController:
                   cliente_data.get('baja', False), cliente_id))
             
             conn.commit()
-            return cursor.rowcount > 0
+            if cursor.rowcount > 0:
+                logger.info(f"Cliente actualizado: ID={cliente_id}")
+                return True
+            return False
             
         except Exception as e:
-            print(f"Error al actualizar cliente: {e}")
+            logger.error(f"Error al actualizar cliente {cliente_id}: {e}")
             return False
     
     def eliminar_cliente(self, cliente_id: int, logico: bool = True) -> bool:
@@ -166,19 +171,20 @@ class ClienteController:
             cursor = conn.cursor()
             
             if logico:
-                # Baja lógica
                 cursor.execute('''
                     UPDATE cliente SET baja = 1 WHERE id = ?
                 ''', (cliente_id,))
             else:
-                # Eliminación física
                 cursor.execute('DELETE FROM cliente WHERE id = ?', (cliente_id,))
             
             conn.commit()
-            return cursor.rowcount > 0
+            if cursor.rowcount > 0:
+                logger.info(f"Cliente eliminado: ID={cliente_id}, lógico={logico}")
+                return True
+            return False
             
         except Exception as e:
-            print(f"Error al eliminar cliente: {e}")
+            logger.error(f"Error al eliminar cliente {cliente_id}: {e}")
             return False
     
     def buscar_clientes(self, criterio: str, 
@@ -197,7 +203,6 @@ class ClienteController:
             conn = self.db.get_connection()
             cursor = conn.cursor()
             
-            # Mapear criterios a columnas
             columnas_validas = {
                 'nombre': 'nombre',
                 'apellido': 'apellido',
@@ -205,6 +210,7 @@ class ClienteController:
             }
             
             if criterio not in columnas_validas:
+                logger.warning(f"Criterio de búsqueda inválido: {criterio}")
                 return []
             
             columna = columnas_validas[criterio]
@@ -220,8 +226,9 @@ class ClienteController:
                 cliente.from_dict(dict(row))
                 clientes.append(cliente)
             
+            logger.info(f"Búsqueda: criterio={criterio}, resultados={len(clientes)}")
             return clientes
             
         except Exception as e:
-            print(f"Error al buscar clientes: {e}")
+            logger.error(f"Error al buscar clientes: {e}")
             return []

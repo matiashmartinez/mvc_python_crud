@@ -35,7 +35,7 @@ class Cliente(BaseModel):
         """
         self.id = id
         self.nombre = nombre
-        self.apellido = nombre
+        self.apellido = apellido
         self.dni = dni
         self.telefono = telefono
         self.baja = baja

@@ -5,7 +5,9 @@ from typing import List, Optional, Dict, Any
 from datetime import date
 from models.servicio import Servicio
 from utils.database import DatabaseConnection
-from models.servicio import Servicio
+from utils.logger import setup_logger
+
+logger = setup_logger(__name__)
 
 
 class ServicioController:
@@ -13,7 +15,7 @@ class ServicioController:
     Controlador que maneja la lógica de negocio para los servicios.
     """
     
-    def __init__(self):
+    def __init__(self) -> None:
         """Inicializa el controlador con la conexión a la base de datos."""
         self.db = DatabaseConnection()
     
@@ -54,7 +56,7 @@ class ServicioController:
             return servicio
             
         except Exception as e:
-            print(f"Error al crear servicio: {e}")
+            logger.error(f"Error al crear servicio: {e}")
             return None
     
     def obtener_servicio(self, servicio_id: int) -> Optional[Servicio]:
@@ -85,7 +87,7 @@ class ServicioController:
             return None
             
         except Exception as e:
-            print(f"Error al obtener servicio: {e}")
+            logger.error(f"Error al obtener servicio: {e}")
             return None
     
     def obtener_servicios_cliente(self, cliente_id: int, 
@@ -122,7 +124,7 @@ class ServicioController:
             return servicios
             
         except Exception as e:
-            print(f"Error al obtener servicios del cliente: {e}")
+            logger.error(f"Error al obtener servicios del cliente: {e}")
             return []
     
     def obtener_todos_servicios(self, incluir_bajas: bool = False) -> List[Servicio]:
@@ -153,7 +155,7 @@ class ServicioController:
             return servicios
             
         except Exception as e:
-            print(f"Error al obtener servicios: {e}")
+            logger.error(f"Error al obtener servicios: {e}")
             return []
     
     def actualizar_servicio(self, servicio_id: int, 
@@ -190,7 +192,7 @@ class ServicioController:
             return cursor.rowcount > 0
             
         except Exception as e:
-            print(f"Error al actualizar servicio: {e}")
+            logger.error(f"Error al actualizar servicio: {e}")
             return False
     
     def eliminar_servicio(self, servicio_id: int, logico: bool = True) -> bool:
@@ -221,7 +223,7 @@ class ServicioController:
             return cursor.rowcount > 0
             
         except Exception as e:
-            print(f"Error al eliminar servicio: {e}")
+            logger.error(f"Error al eliminar servicio: {e}")
             return False
     
     def obtener_servicios_por_estado(self, estado: str) -> List[Servicio]:
@@ -256,7 +258,7 @@ class ServicioController:
             return servicios
             
         except Exception as e:
-            print(f"Error al obtener servicios por estado: {e}")
+            logger.error(f"Error al obtener servicios por estado: {e}")
             return []
     
     def actualizar_estado_servicio(self, servicio_id: int, 
@@ -288,5 +290,5 @@ class ServicioController:
             return cursor.rowcount > 0
             
         except Exception as e:
-            print(f"Error al actualizar estado del servicio: {e}")
+            logger.error(f"Error al actualizar estado del servicio: {e}")
             return False
